@@ -1,8 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
 body {
-  padding: 50px;
+  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
 }
 
 a {
   color: #00B7FF;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+#instruments {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
+}
+
+nav {
+    display: flex;
+    background-color: #333;
+    width: 100%;
+    justify-content: right;
+    
+}
+#home {
+  padding: 30px;
+}
+#log-in {
+  padding: 20px
+}
+
+#become-a-teacher {
+  display: grid;
+  
+}
+
+.instrument {
+  /* display: flex; */
+  padding: 10%;
 }

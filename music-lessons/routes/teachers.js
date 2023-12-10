@@ -3,8 +3,20 @@ var router = express.Router();
 
 var teachersCtrl = require('../controllers/teachers')
 
-//GET Index /teachers
+//GET / ---> teacher (index)
 router.get('/', teachersCtrl.index)
+
+//GET /new ---> takes teachers to fill out a registration form 
+router.get('/new', teachersCtrl.new)
+
+//GET /id (show)
+router.get('/:id', teachersCtrl.show)
+
+//POST / ----> creates new teacher 
+router.post('/', teachersCtrl.create)
+
+//DELETE
+router.delete('/:id', teachersCtrl.delete)
 
 
 module.exports = router;

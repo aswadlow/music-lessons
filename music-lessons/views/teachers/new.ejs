@@ -1,0 +1,62 @@
+<%- include('../partials/header') %>
+
+
+
+<form id="become-a-teacher" action="/teachers" method="POST">
+    <label>Name</label>
+    <input type="text" name="name">
+    <label>What do you teach?</label>
+    <select name="instruments">
+       <option>select Instrument</option>
+        <option class="Instrument" value="Guitar">Guitar</option>
+        <option class="Instrument" value="Drums">Drums</option>
+        <option class="Instrument" value="Piano">Piano</option>
+        <option class="Instrument" value="Bass">Bass</option>
+        <option class="Instrument" value="Vocal">Vocal</option>
+    </select>
+    <label>Days Aavialbe:</label>
+        <div>
+            <input type="checkbox" id="Monday" name="days" value="Monday">
+            <label for="Monday">Monday</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Tuesday" name="days" value="Tuesday">
+            <label for="Tuesday">Tuesday</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Wednesday" name="days" value="Wednesday">
+            <label for="Wednesday">Wednesday</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Thursday" name="days" value="Thursday">
+            <label for="Thursday">Thursday</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Friday" name="days" value="Friday">
+            <label for="Friday">Friday</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Saturday" name="days[]" value="Saturday">
+            <label for="Saturday">Saturday</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Sunday" name="days[]" value="Sunday">
+            <label for="Sunday">Sunday</label>
+        </div>
+   
+    <label>Years of Experience:</label>
+    <select name="experience" id="experience">
+        <option value="">Select</option>
+        <script>
+            for (var i = 1; i <= 20; i++) {
+                document.write("<option value=\"" + i + "\">" + i + "</option>");
+            }
+        </script>
+    </select>
+ 
+    <input type="submit" value="Create Profile">
+</form>
+
+
+
+<%- include('../partials/footer') %>

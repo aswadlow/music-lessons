@@ -1,5 +1,32 @@
 <%- include('../partials/header') %>
 
+<table id="teacher-list">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Instrument</th>
+        <th>Days Availalbe</th>
+        <th>Years of Experence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% teachers.forEach(function(teacher) { %>
+        <tr>
+          <td><%= teacher.name %></td>
+          <td><%= teacher.instruments %></td>
+          <td><%= teacher.days %></td>
+          <td><%= teacher.experience %></td>
+          <td><a href="/teachers/<%= teacher._id %>">More about <%= teacher.name %> </a>
+            <!-- DELETE BUTTON -->
+          <form action="/teachers/<%= teacher._id %>" method="DELETE" style="display: inline;">
+            <input type="hidden" name="delete" value="delete">
+            <button type="submit">Delete</button>
+         </form></td>
+        </tr>
+        <% }); %>
+
+      </tbody>
+    </table>
 
 
 
