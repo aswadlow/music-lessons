@@ -2,5 +2,15 @@
 
 <h2>Your Lessons</h2>
 
+<form id="book-lesson-form" action="/teachers/<%= teacher._id %>/lessons/new" method="POST">
+    <label>Seat</label>
+    <input type="text" name="seat" pattern="[A-F][1-9]\d?" title="Enter a seat in the format A1, B2, etc." required>
+
+    <label>Price</label>
+    <input type="number" name="price">
+
+    <button type="submit">Book Lesson</button>
+</form>
+
 
 <%- include('../partials/footer') %>

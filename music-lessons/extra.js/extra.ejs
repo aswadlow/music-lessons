@@ -43,3 +43,11 @@
              <input type="submit" value="Submit">
          </form>
          </form>
+
+
+
+         //SHOW PAGE BOOK A LESSON button
+         <form action="/teachers/<%= teacher._id %>/edit?_method=PUT" method="POST" style="display: inline;">
+            <input type="hidden" name="_method" value="PUT">
+            <button type="submit">Book a Lesson</button>
+          </form>

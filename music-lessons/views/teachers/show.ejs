@@ -16,10 +16,11 @@
   <button type="submit">Edit Profile</button>
 </a>
 
-<form action="/teachers/<%= teacher._id %>/edit?_method=PUT" method="POST" style="display: inline;">
-  <input type="hidden" name="_method" value="PUT">
-  <button type="submit">Book a Lesson</button>
-</form>
+<a href="/teachers/<%= teacher._id %>/lessons/new">
+  <button type="submit"> Book a Lesson</button>
+</a>
+
+
 
 
 <!-- <table id="teacher-list">
