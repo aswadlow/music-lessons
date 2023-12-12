@@ -1,43 +1,38 @@
 <%- include('../partials/header') %>
 
-<h2>Profile Picture</h2>
+<h2>Teacher detail page </h2>
 
-<h2>Bio</h2>
-<input type="text">
-<input type="submit" value="Add Bio">
+<div><b>Teacher Name:</b></div>
+<div><%= teacher.name %></div>
+<div> <b>Teaches</b></div>
+<div><%= teacher.instruments %></div>
+<div> <b>Days Available</b></div>
+<div><%= teacher.days %></div>
+<div> <b>Years of Experience</b></div>
+<div><%= teacher.experience %></div>
 
-<h2>Location Information</h2>
 
-<form action="" method="POST">
-    <label for="city">City:</label>
-    <input type="text" id="city" name="city" required>
-    <br>
+<a href="/teachers/<%= teacher._id %>/edit" >
+  <button type="submit">Edit Profile</button>
+</a>
 
-    <label for="state">State:</label>
-    <input type="text" id="state" name="state" required>
-    <br>
-
-    <label for="zip">ZIP Code:</label>
-    <input type="text" id="zip" name="zip" pattern="\d{5}" title="Enter a valid ZIP code" required>
-    <br>
-
-    <input type="submit" value="Submit">
+<form action="/teachers/<%= teacher._id %>/edit?_method=PUT" method="POST" style="display: inline;">
+  <input type="hidden" name="_method" value="PUT">
+  <button type="submit">Book a Lesson</button>
 </form>
 
-<h2>Contact Information</h2>
 
-<form action="" method="POST">
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required>
-    <br>
+<!-- <table id="teacher-list">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Instrument</th>
+        <th>Days Availalbe</th>
+        <th>Years of Experence</th>
+      </tr>
+    </thead>
 
-    
-    <label for="phone">Phone:</label>
-    <input type="text" id="phone" name="phone">
-    <br>
-
-    <input type="submit" value="Submit">
-</form>
+    </table> -->
 
 
 <%- include('../partials/footer') %>

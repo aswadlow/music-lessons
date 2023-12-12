@@ -11,7 +11,7 @@ const teacherSchema = new Schema({
     },
     instruments: {
         type: String,
-        enum: ['Guitar', 'Drums', 'Piano', 'Bass', 'Vocal'],
+        enum: ['Guitar', 'Drums', 'Piano', 'Bass', 'Vocals'],
         required: true
     },
     days: [{
@@ -25,6 +25,15 @@ const teacherSchema = new Schema({
         min: 1,
         max: 100
     },
+    bio: {
+        type: String
+    },
+    location: {
+
+    },
+    contact: {
+        
+    }
 
 })
 

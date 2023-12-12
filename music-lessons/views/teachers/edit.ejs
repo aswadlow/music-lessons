@@ -1,0 +1,61 @@
+<%- include('../partials/header') %>
+
+<form id="become-a-teacher" action="/teachers/<%=teacher._id%>?_method=PUT" method="POST">
+    <label>Name</label>
+    <input value="<%=teacher.name%>" type="text" name="name">
+    <label>What do you teach?</label>
+    <select name="instruments">
+      <option>select Instrument</option>
+       <option class="Instrument" value="Guitar" <%= (teacher.instruments === 'Guitar' ? 'selected' : null) %> >Guitar</option>
+       <option class="Instrument" value="Drums" <%= (teacher.instruments === 'Drums' ? 'selected' : null) %> >Drums</option>
+       <option class="Instrument" value="Piano" <%= (teacher.instruments === 'Piano' ? 'selected' : null) %> >Piano</option>
+       <option class="Instrument" value="Bass" <%= (teacher.instruments === 'Bass' ? 'selected' : null) %> >Bass</option>
+       <option class="Instrument" value="Vocal" <%= (teacher.instruments === 'Vocal' ? 'selected' : null) %> >Vocal</option>
+   </select> 
+
+    <label>Days Aavialbe:</label>
+        <div>
+            <input <%= (teacher.days.includes('Monday') ? "checked" : null) %> type="checkbox" id="Monday" name="days" value="Monday">
+            <label for="Monday">Monday</label>
+        </div>
+        <div>
+            <input <%= (teacher.days.includes('Tuesday') ? "checked" : null) %> type="checkbox" id="Tuesday" name="days" value="Tuesday">
+            <label for="Tuesday">Tuesday</label>
+        </div>
+        <div>
+            <input <%= (teacher.days.includes('Wednesday') ? "checked" : null) %> type="checkbox" id="Wednesday" name="days" value="Wednesday">
+            <label for="Wednesday">Wednesday</label>
+        </div>
+        <div>
+            <input <%= (teacher.days.includes('Thursday') ? "checked" : null) %> type="checkbox" id="Thursday" name="days" value="Thursday">
+            <label for="Thursday">Thursday</label>
+        </div>
+        <div>
+            <input <%= (teacher.days.includes('Friday') ? "checked" : null) %> type="checkbox" id="Friday" name="days" value="Friday">
+            <label for="Friday">Friday</label>
+        </div>
+        <div>
+            <input <%= (teacher.days.includes('Saturday') ? "checked" : null) %> type="checkbox" id="Saturday" name="days[]" value="Saturday">
+            <label for="Saturday">Saturday</label>
+        </div>
+        <div>
+            <input <%= (teacher.days.includes('Sunday') ? "checked" : null) %> type="checkbox" id="Sunday" name="days[]" value="Sunday">
+            <label for="Sunday">Sunday</label>
+        </div>
+   
+    <label>Years of Experience:</label>
+    <select value="<%=teacher.experience%>" type="text" name="experience">
+        <option value="">Select</option>
+        
+        <% for (var i = 1; i <= 20; i++) { %>
+            <option <%= (teacher.experience === i ? 'selected' : null) %> value=<%= i %>><%= i %></option>
+        <% } %>
+        
+    </select>
+
+    <button type="submit">Update</button>
+ 
+</form>
+
+
+<%- include('../partials/footer') %>

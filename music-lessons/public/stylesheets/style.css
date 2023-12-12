@@ -60,6 +60,9 @@ nav {
 #log-in {
   padding: 20px
 }
+#create-profile {
+  padding: 30px;
+}
 
 .instrument {
   /* display: flex; */
