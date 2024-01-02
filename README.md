@@ -38,3 +38,6 @@ This app was created to make it easier and more enjoyable!
 
 #### Lessons Page
 <img width="790" alt="Screen Shot 2023-12-12 at 9 28 40 AM" src="https://github.com/aswadlow/music-lessons/assets/90797309/a1b639a3-1439-4d81-b98e-d31807f96d26">
+
+# Visit site 
+https://music-lessons-swad-2a0876ad22c6.herokuapp.com/
